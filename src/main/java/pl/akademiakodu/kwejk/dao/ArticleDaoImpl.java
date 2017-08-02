@@ -9,6 +9,7 @@ import java.util.List;
  * Created by Mateusz Kuczyński on 02.08.2017.
  */
 public class ArticleDaoImpl implements ArticleDaoInterface {
+
     static List<Article> articles = new ArrayList<>();
     static {
         articles.add(new Article("artykuł1", "fajny artykuł"));

@@ -45,22 +45,11 @@
     </div>
     <div class="gifs container">
         <div class="row">
-            <img src="gifs/android-explosion.gif" alt="android explosion">
-        </div>
-        <div class="row">
-            <img src="gifs/ben-and-mike.gif" alt="ben-and-mike">
-        </div>
-        <div class="row">
-            <img src="gifs/book-dominos.gif" alt="book-dominosn">
-        </div>
-        <div class="row">
-            <img src="gifs/compiler-bot.gif" alt="compiler-bot">
-        </div>
-        <div class="row">
-            <img src="gifs/cowboy-coder.gif" alt="cowboy-coder">
-        </div>
-        <div class="row">
-            <img src="gifs/infinite-andrew.gif" alt="infinite-andrew">
+            <div th:each="gif : ${gifs}" class="col s12 l4">
+                <a th:href="@{|/gif/${gif.name}|}">
+                    <img th:src="@{|/gifs/${gif.name}.gif|}" />
+                    <a href="#" th:class="(${gif.favorite}? 'un' : '') + 'mark favorite'"></a>
+            </div>
         </div>
     </div>
 
