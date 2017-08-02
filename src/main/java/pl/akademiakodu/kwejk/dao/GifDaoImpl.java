@@ -31,4 +31,16 @@ public class GifDaoImpl implements GifDaoInterface {
         return gifs;
     }
 
+    @Override
+    public Gif findByName(String name) {
+        Gif result = null;
+
+        for (Gif gifList :gifs){
+            if ( gifList.getName().equals(name)){
+                result = gifList;
+            }
+        }
+        return result;
+    }
+
 }
