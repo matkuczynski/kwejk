@@ -42,5 +42,4 @@ public class GifDaoImpl implements GifDaoInterface {
         }
         return result;
     }
-
 }
