@@ -1,8 +1,5 @@
 package pl.akademiakodu.kwejk.model;
 
-/**
- * Created by Mateusz Kuczyński on 02.08.2017.
- */
 public class Gif {
 
     private String name;

@@ -10,9 +10,16 @@ public class GifController {
 
     private GifDaoImpl gifDaoImpl = new GifDaoImpl();
 
+    @GetMapping("/favorites")
+    public String articleTable(ModelMap modelMap){
+        modelMap.addAttribute("gifs", gifDaoImpl.findFavoritesGif());
+        return "favorites";
+    }
+
     @GetMapping("/")
     public String allGifs(ModelMap modelMap){
         modelMap.addAttribute("gifs", gifDaoImpl.findAllGifs());
         return "home";
     }
+
 }
