@@ -93,6 +93,15 @@ nav ul li.active, nav ul li:hover {
     border-radius: 6px;
 }
 
+.facebook {
+border-radius: 20px;
+background: #3b5998;
+}
+
+.facebook:hover {
+background: #6d84b4;
+}
+
 .col {
     margin-bottom: 0.75rem;
     position: relative;
