@@ -8,4 +8,7 @@ public interface GifDaoInterface {
     List<Gif> findFavoritesGif();
     List<Gif> findAllGifs();
     Gif findByName(String name);
+    List<Gif> findTopRated();
+    List<Gif> findMostPopular();
+    List<Gif> findNew();
 }
