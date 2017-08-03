@@ -1,5 +1,6 @@
 package pl.akademiakodu.kwejk.dao;
 
+import pl.akademiakodu.kwejk.model.Category;
 import pl.akademiakodu.kwejk.model.Gif;
 
 import java.util.ArrayList;

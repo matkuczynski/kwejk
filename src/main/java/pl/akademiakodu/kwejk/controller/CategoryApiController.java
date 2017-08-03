@@ -26,4 +26,10 @@ public class CategoryApiController {
     public List<Gif> apiGifDetails(@PathVariable String name){
         return gifDaoImpl.findByName(name);
     }
+
+    @GetMapping("/api/categories/{id}")
+    public Category category(@PathVariable Long id){
+        CategoryDao categoryDao = new CategoryDao();
+        return categoryDao.getCategory(id);
+    }
 }

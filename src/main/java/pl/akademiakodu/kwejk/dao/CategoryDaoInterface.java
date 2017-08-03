@@ -11,4 +11,5 @@ import java.util.List;
 public interface CategoryDaoInterface {
 
     List<Category> showAllCategories();
+    Category getCategory(Long id);
 }
