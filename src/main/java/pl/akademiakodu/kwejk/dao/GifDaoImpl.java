@@ -21,7 +21,7 @@ public class GifDaoImpl implements GifDaoInterface {
     public List<Gif> findFavoritesGif() {
         List<Gif> gifsFavorite = new ArrayList<>();
         for(int i = 0; i < gifs.size();i++) {
-            if (gifs.get(i).getFavorite() == true)
+            if (gifs.get(i).getFavorite())
                 gifsFavorite.add(gifs.get(i));
         }
         return gifsFavorite;
@@ -32,14 +32,14 @@ public class GifDaoImpl implements GifDaoInterface {
     }
 
     @Override
-    public Gif findByName(String name) {
-        Gif result = null;
+    public List<Gif> findByName(String name) {
+        List<Gif> gifs = new ArrayList<>();
 
         for (Gif gifList :gifs){
             if ( gifList.getName().equals(name)){
-                result = gifList;
+                gifs.add(gifList);
             }
         }
-        return result;
+        return gifs;
     }
 }
