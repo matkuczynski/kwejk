@@ -45,6 +45,9 @@
     </div>
     <div class="gifs container">
         <div class="row">
+
+            <h2 th:if="${gifs.isEmpty()}">NIE ZNALEZIONO GIFA</h2>
+
             <div th:each="gif : ${gifs}" class="col s12 l4">
                 <a th:href="@{|/gif/${gif.name}|}">
                     <img th:src="@{|/gifs/${gif.name}.gif|}" />
@@ -52,7 +55,6 @@
             </div>
         </div>
     </div>
-
 <script th:src="@{/vendor/jquery/jquery-1.11.3.js}"></script>
 <script th:src="@{/vendor/materialize/js/materialize.js}"></script>
 <script th:src="@{/app.js}"></script>
