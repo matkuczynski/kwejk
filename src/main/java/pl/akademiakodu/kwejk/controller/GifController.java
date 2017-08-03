@@ -29,7 +29,7 @@ public class GifController {
     @GetMapping("/gif/{name}")
     public String display(@PathVariable String name, ModelMap modelMap ){    //@PathVariable - odnosi sie bezposrednio do id url
         modelMap.addAttribute("gifs", gifDaoImpl.findByName(name));
-        return "chosen-gif";
+        return "home";
     }
 
     @GetMapping("/gifs/search")

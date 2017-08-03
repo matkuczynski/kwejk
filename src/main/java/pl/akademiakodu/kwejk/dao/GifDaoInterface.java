@@ -7,5 +7,5 @@ import java.util.List;
 public interface GifDaoInterface {
     List<Gif> findFavoritesGif();
     List<Gif> findAllGifs();
-    Gif findByName(String name);
+    List<Gif> findByName(String name);
 }

@@ -6,12 +6,20 @@ public class Gif {
 
     private Boolean isFavorite;
 
+    private String username;
+
     public Gif() {
     }
 
     public Gif(String name, Boolean isFavorite) {
         this.name = name;
         this.isFavorite = isFavorite;
+    }
+
+    public Gif(String name, Boolean isFavorite, String username) {
+        this.name = name;
+        this.isFavorite = isFavorite;
+        this.username = username;
     }
 
     public String getName() {
@@ -28,5 +36,13 @@ public class Gif {
 
     public void setFavorite(Boolean favorite) {
         isFavorite = favorite;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

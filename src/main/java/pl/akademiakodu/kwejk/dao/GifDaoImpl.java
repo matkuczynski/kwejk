@@ -9,12 +9,12 @@ public class GifDaoImpl implements GifDaoInterface {
 
     static List<Gif> gifs = new ArrayList<>();
     static {
-        gifs.add(new Gif("android-explosion",  true));
-        gifs.add(new Gif("ben-and-mike",  false));
-        gifs.add(new Gif("book-dominos",  false));
-        gifs.add(new Gif("compiler-bot",  false));
-        gifs.add(new Gif("cowboy-coder", true));
-        gifs.add(new Gif("infinite-andrew",  false));
+        gifs.add(new Gif("android-explosion",  true, "tomek"));
+        gifs.add(new Gif("ben-and-mike",  false, "Matylda"));
+        gifs.add(new Gif("book-dominos",  false, "Kaczorex"));
+        gifs.add(new Gif("compiler-bot",  false, "Ppp99"));
+        gifs.add(new Gif("cowboy-coder", true, "Tobi Gobi"));
+        gifs.add(new Gif("infinite-andrew",  false, "0907"));
     }
 
     @Override
@@ -33,13 +33,13 @@ public class GifDaoImpl implements GifDaoInterface {
 
     @Override
     public List<Gif> findByName(String name) {
-        List<Gif> gifs = new ArrayList<>();
+        List<Gif> gifsL = new ArrayList<>();
 
-        for (Gif gifList :gifs){
-            if ( gifList.getName().equals(name)){
-                gifs.add(gifList);
+        for (Gif g :gifs){
+            if ( g.getName().equals(name)){
+                gifsL.add(g);
             }
         }
-        return gifs;
+        return gifsL;
     }
 }
