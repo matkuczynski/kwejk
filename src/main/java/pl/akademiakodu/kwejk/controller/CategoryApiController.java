@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 public class CategoryApiController {
+
     @GetMapping("/api/categories")
     public List<Category> listCategories(){
         CategoryDao categoryDao = new CategoryDao();
